@@ -17,12 +17,12 @@ Discord Bot : Player Unknown Battle Ground Player information Search
   !배그스쿼드1 : Search player's squad que(TPP)
   !배그스쿼드2 : Search player's squad que(FPP)
   
-   ![img](img2/1.png)
+   ![img](img2/1.PNG)
     
-   ![img](img2/2.png)
+   ![img](img2/2.PNG)
    
-   ![img](img2/3.png)
+   ![img](img2/3.PNG)
    
-   ![img](img2/4.png)
+   ![img](img2/4.PNG)
    
-   ![img](img2/5.png)
+   ![img](img2/5.PNG)
