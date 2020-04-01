@@ -122,6 +122,11 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except HTTPError as e:
             embed = discord.Embed(title="Not existing plyer", description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
 
     if message.content.startswith("!배그듀오1"):
         baseURL = "https://dak.gg/profile/"
@@ -205,6 +210,11 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("PUBG player " + playerNickname + "'s TPP duo que information", embed=embed)
         except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
             embed = discord.Embed(title="Not existing plyer",
                                   description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
                                   color=0x5CD1E5)
@@ -293,6 +303,11 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("PUBG player " + playerNickname + "'s TPP squad que information", embed=embed)
         except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
             embed = discord.Embed(title="Not existing plyer",
                                   description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
                                   color=0x5CD1E5)
@@ -390,6 +405,11 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                                   description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
 
     if message.content.startswith("!배그듀오2"):
         baseURL = "https://dak.gg/profile/"
@@ -478,6 +498,11 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     await message.channel.send("PUBG player " + playerNickname + "'s FPP duo que information",
                                                embed=embed)
         except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
             embed = discord.Embed(title="Not existing plyer",
                                   description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
                                   color=0x5CD1E5)
@@ -571,6 +596,11 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     await message.channel.send("PUBG player " + playerNickname + "'s FPP squad que information",
                                                embed=embed)
         except HTTPError as e:
+            embed = discord.Embed(title="Not existing plyer",
+                                  description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
+                                  color=0x5CD1E5)
+            await message.channel.send("Error : Not existing player", embed=embed)
+        except AttributeError as e:
             embed = discord.Embed(title="Not existing plyer",
                                   description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
                                   color=0x5CD1E5)
