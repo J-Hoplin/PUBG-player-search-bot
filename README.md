@@ -9,7 +9,10 @@ Discord Bot : Player Unknown Battle Ground Player information Search
 
 4 . Support : All of the server(Kakao/Steam) are supported and you can search everywhere, regardless of the FPP TPP.
 ***
-  
+  - Patch Note 20200401
+    
+    - Bug Fix
+***
   - !배그솔로1 : Search player's solo que(TPP)
   
   - !배그솔로2 : Search player's solo que(FPP)
