@@ -1,5 +1,8 @@
 Discord Bot : Player Unknown Battle Ground Player information Search
 ===
+
+**봇 소스코드를 가져가서 쓰시되, 출처를 꼭 밝히고 쓰시길 바랍니다**
+
 ***
 1 . Discord.py Version : 1.0.0(Rewrite Version)
 
