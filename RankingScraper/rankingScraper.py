@@ -1,4 +1,3 @@
-
 import os
 import urllib
 from urllib.request import URLError
@@ -34,7 +33,6 @@ rankElements = html.findAll('div',{'class' : re.compile('squad ranked [A-Za-z0-9
 '''
 -> 클래스 값을 가져와서 판별하는 것도 있지만 이 방법을 사용해 본다.
 -> 만약 기록이 존재 하지 않는 경우 class 가 no_record라는 값을 가진 <div>가 생성된다. 이 태그로 데이터 유무 판별하면된다.
-
 print(rankElements[1].find('div',{'class' : 'no_record'}))
 '''
 
@@ -52,6 +50,8 @@ else:
     tierInfo = fR.find('div',{'class' : 'grade-info'}).img['alt']
     
     # Rating Inforamtion
+    # RP Score
+    RPScore = fR.find('div',{'class' : 'rating'}).find('span',{'class' : 'caption'}).text
     
     #Get top rate statistics
     
@@ -81,6 +81,4 @@ else:
     print(topRatio)
     print(statsList)
     print(statsRatingList)
-    
-
-
+    print(RPScore)
