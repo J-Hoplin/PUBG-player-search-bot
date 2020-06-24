@@ -16,6 +16,12 @@ Discord Bot : Player Unknown Battle Ground Player information Search
   - Patch Note 20200401
     
     - Bug Fix
+    
+  - Patch Note 20200624
+  
+    - 경쟁전 전적검색 기능 업데이트. 
+    
+    - 다음패치는 리팩토링 작업과 경쟁전 전적검색 안정화 작업을 할 예정입니다. 현재 변경된 웹 구조를 대응한 상태이지만, 사용하면서 오류가 있으시다면 바로 Issues에 올려주시면 감사하겠습니다.
 ***
   - !배그솔로1 : Search player's solo que(TPP)
   
