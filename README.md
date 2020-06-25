@@ -19,6 +19,8 @@ Discord Bot : Player Unknown Battle Ground Player information Search
     
   - Patch Note 20200624
   
+    - Patch BackGround : https://github.com/J-hoplin1/PUBG-player-search-bot/commit/c3d0cbd9631d095ae110be5b995b1bc6cfec86a6
+  
     - 경쟁전 전적검색 기능 업데이트. 
     
     - 다음패치는 리팩토링 작업과 경쟁전 전적검색 안정화 작업을 할 예정입니다. 현재 변경된 웹 구조를 대응한 상태이지만, 사용하면서 오류가 있으시다면 바로 Issues에 올려주시면 감사하겠습니다.
