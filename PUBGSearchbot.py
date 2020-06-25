@@ -21,7 +21,7 @@ import json
 import time
 
 
-token = 'NzI1MzQzNjQ3NjM3MTc2MzUw.XvNW8w.UJp9giskKNWkIcK7BtKJhkqsvgc'
+token = 'NzI1MzQzNjQ3NjM3MTc2MzUw.XvR4yw.N9HfRqb3jV_uADulUAnyfSGEjLc'
 
 client = discord.Client()
 @client.event # Use these decorator to register an event.
@@ -66,7 +66,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
 
                 # Varaible serverAccessorAndStatus : [(accessors),(ServerStatus),(Don't needed value)]
                 
-                # index 0: fpp 1 : tpp
+                # Varaibel rankElements : index 0: fpp 1 : tpp
                 
                 rankElements = bs.findAll('div',{'class' : re.compile('squad ranked [A-Za-z0-9]')})
                 
@@ -76,11 +76,12 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                 print(rankElements[1].find('div',{'class' : 'no_record'}))
                 '''
                 
-                if rankElements[0].find('div',{'class' : 'no_record'}) != None: # 인덱스 0 : 경쟁전 fpp -> 정보가 있는지 없는지 유무를 판별한다a.
-                    embed = discord.Embed(title="Record not found", description="Solo que record not found.",
-                                          color=0x5CD1E5)
+                if rankElements[0].find('div',{'class' : 'no_record'}) != None: # 인덱스 0 : 경쟁전 fpp -> 정보가 있는지 없는지 유무를 판별한다.
+                    embed = discord.Embed(title="Record not found", description="Rank TPP record not found.",color=0x5CD1E5)
                     embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
-                    await message.channel.send("PUBG player " + playerNickname + "'s TPP solo que") 
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s TPP Ranking information",embed=embed) 
                 else:
                     #Short of fpp Rank
                     fR = rankElements[0]
@@ -124,7 +125,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed.add_field(name="Real Time Accessors and Server Status",
                                     value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
                                           serverAccessorAndStatus[1].split(':')[-1], inline=False)  
-                    embed.add_field(name="Player located server", value=seasonInfo[2] + " Server,", inline=False)
+                    embed.add_field(name="Player located server", value=seasonInfo[2] + " Server", inline=False)
                     embed.add_field(name = "Tier / Top Rate / Average Rank",
                                    value = tierInfo + " (" + RPScore + ") / "+topRatio + " / " + topRatioRank,inline=False)
                     embed.add_field(name="K/D", value=statsList[0] + "/" + statsRatingList[0], inline=True)
@@ -141,11 +142,13 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except HTTPError as e:
             embed = discord.Embed(title="Not existing plyer", description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
+            print(e)
         except AttributeError as e:
             embed = discord.Embed(title="Not existing plyer",
                                   description="Can't find player " + playerNickname + "'s information.\nPlease check player's nickname again",
                                   color=0x5CD1E5)
             await message.channel.send("Error : Not existing player", embed=embed)
+            print(e)
     
     if message.content.startswith("!경쟁전2"):#FPP 
         baseURL = "https://dak.gg/profile/"
@@ -190,7 +193,9 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed = discord.Embed(title="Record not found", description="Solo que record not found.",
                                           color=0x5CD1E5)
                     embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
-                    await message.channel.send("PUBG player " + playerNickname + "'s TPP solo que") 
+                    embed.set_footer(text='Service provided by Hoplin.',
+                                     icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP Ranking information",embed=embed) 
                 else:
                     #Short of fpp Rank
                     fR = rankElements[1]
@@ -234,7 +239,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed.add_field(name="Real Time Accessors and Server Status",
                                     value="Accessors : " + serverAccessorAndStatus[0] + " | " "Server Status : " +
                                           serverAccessorAndStatus[1].split(':')[-1], inline=False)  
-                    embed.add_field(name="Player located server", value=seasonInfo[2] + " Server,", inline=False)
+                    embed.add_field(name="Player located server", value=seasonInfo[2] + " Server", inline=False)
                     embed.add_field(name = "Tier / Top Rate / Average Rank",
                                    value = tierInfo + " (" + RPScore + ") / "+topRatio + " / " + topRatioRank,inline=False)
                     embed.add_field(name="K/D", value=statsList[0] + "/" + statsRatingList[0], inline=True)
@@ -245,7 +250,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed.add_field(name="평균등수", value=statsList[5],inline=True)
                     embed.set_footer(text='Service provided by Hoplin.',
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
-                    await message.channel.send("PUBG player " + playerNickname + "'s TPP Ranking information", embed=embed)
+                    await message.channel.send("PUBG player " + playerNickname + "'s FPP Ranking information", embed=embed)
                     
             
         except HTTPError as e:
@@ -311,7 +316,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     comInfo = []
                     # [K/D,승률,Top10,평균딜량,게임수, 최다킬수,헤드샷,저격거리,생존,평균순위]
                     for ci in soloQueInfo.findAll('p', {'class': 'value'}):
-                        comInfo.append(ci.text.strip().replace(" ",""))
+                        comInfo.append(''.join(ci.text.split()))
 
                     embed = discord.Embed(title="Player Unkonw Battle Ground player search from dak.gg", description="",
                                           color=0x5CD1E5)
@@ -396,7 +401,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     comInfo = []
                     # [K/D,승률,Top10,평균딜량,게임수, 최다킬수,헤드샷,저격거리,생존,평균순위]
                     for ci in duoQueInfo.findAll('p', {'class': 'value'}):
-                        comInfo.append(ci.text.strip().replace(" ",""))
+                        comInfo.append(''.join(ci.text.split()))
 
                     embed = discord.Embed(title="Player Unkonw Battle Ground player search from dak.gg", description="",
                                           color=0x5CD1E5)
@@ -483,7 +488,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     comInfo = []
                     # [K/D,승률,Top10,평균딜량,게임수, 최다킬수,헤드샷,저격거리,생존,평균순위]
                     for ci in squadQueInfo.findAll('p', {'class': 'value'}):
-                        comInfo.append(ci.text.strip().replace(" ",""))
+                        comInfo.append(''.join(ci.text.split()))
                     embed = discord.Embed(title="Player Unkonw Battle Ground player search from dak.gg", description="",
                                           color=0x5CD1E5)
                     embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
@@ -571,7 +576,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     comInfo = []
                     # [K/D,승률,Top10,평균딜량,게임수, 최다킬수,헤드샷,저격거리,생존,평균순위]
                     for ci in soloQueInfo.findAll('p', {'class': 'value'}):
-                        comInfo.append(ci.text.strip().replace(" ",""))
+                        comInfo.append(''.join(ci.text.split()))
                     embed = discord.Embed(title="Player Unkonw Battle Ground player search from dak.gg", description="",
                                           color=0x5CD1E5)
                     embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
@@ -661,7 +666,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     comInfo = []
                     # [K/D,승률,Top10,평균딜량,게임수, 최다킬수,헤드샷,저격거리,생존,평균순위]
                     for ci in duoQueInfo.findAll('p', {'class': 'value'}):
-                        comInfo.append(ci.text.strip().replace(" ",""))
+                        comInfo.append(''.join(ci.text.split()))
                     embed = discord.Embed(title="Player Unkonw Battle Ground player search from dak.gg", description="",
                                           color=0x5CD1E5)
                     embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
@@ -752,7 +757,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     comInfo = []
                     # [K/D,승률,Top10,평균딜량,게임수, 최다킬수,헤드샷,저격거리,생존,평균순위]
                     for ci in squadQueInfo.findAll('p', {'class': 'value'}):
-                        comInfo.append(ci.text.strip().replace(" ",""))
+                        comInfo.append(''.join(ci.text.split()))
                     embed = discord.Embed(title="Player Unkonw Battle Ground player search from dak.gg", description="",
                                           color=0x5CD1E5)
                     embed.add_field(name="Player search from dak.gg", value=URL, inline=False)
