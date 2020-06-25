@@ -21,11 +21,7 @@ import json
 import time
 
 
-<<<<<<< HEAD
 token = 'NzI1MzQzNjQ3NjM3MTc2MzUw.XvR4yw.N9HfRqb3jV_uADulUAnyfSGEjLc'
-=======
-token = ''
->>>>>>> 9ed5399d93e0b93c54451c9dcc1d07cfbe85e8b0
 
 client = discord.Client()
 @client.event # Use these decorator to register an event.
