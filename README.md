@@ -19,12 +19,27 @@ Discord Bot : Player Unknown Battle Ground Player information Search
     
   - Patch Note 20200624
   
-    - Patch BackGround : https://github.com/J-hoplin1/PUBG-player-search-bot/commit/c3d0cbd9631d095ae110be5b995b1bc6cfec86a6
+    - Patch Note BackGround : https://github.com/J-hoplin1/PUBG-player-search-bot/commit/c3d0cbd9631d095ae110be5b995b1bc6cfec86a6
   
-    - 경쟁전 전적검색 기능 업데이트. 
+    - Really thanks to [kimjaehyeok1](https://github.com/kimjaehyeok1) to give information about PUBG Rank Game. 
     
-    - 다음패치는 리팩토링 작업과 경쟁전 전적검색 안정화 작업을 할 예정입니다. 현재 변경된 웹 구조를 대응한 상태이지만, 사용하면서 오류가 있으시다면 바로 Issues에 올려주시면 감사하겠습니다.
+    - I observe that dak.gg's web rescue has been changed, due to rank game appeared. So I patch Rank Game Search features to Discord Bot.
+
+  - Patch Note 20200625
+  
+    - Patch Note BackGround : Patch Note 20200624
+    
+    - Bug Fix
+    
+    - There is some bug about discord layout. Some information can't be displayed. So I make clean up information that can't be seen.
+    
+    
 ***
+
+  - !경쟁전1 : Search player's TPP Ranking Information.
+  
+  - 경쟁전 2 : Search Player's FPP Ranking Information
+
   - !배그솔로1 : Search player's solo que(TPP)
   
   - !배그솔로2 : Search player's solo que(FPP)
