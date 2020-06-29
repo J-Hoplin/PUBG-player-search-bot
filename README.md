@@ -36,6 +36,12 @@ Discord Bot : Player Unknown Battle Ground Player information Search
     
 ***
 
+- 정기점검 일표
+
+  - 20200629 정기점검 완료 : 상태 : Good
+
+***
+
   - !경쟁전1 : Search player's TPP Ranking Information.
   
   - 경쟁전 2 : Search Player's FPP Ranking Information
