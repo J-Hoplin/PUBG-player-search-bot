@@ -33,6 +33,13 @@ Discord Bot : Player Unknown Battle Ground Player information Search
     
     - There is some bug about discord layout. Some information can't be displayed. So I make clean up information that can't be seen.
     
+  - Patch Note 20200702
+  
+    - Patch Note BackGround : https://github.com/J-hoplin1/PUBG-player-search-bot/commit/c3d0cbd9631d095ae110be5b995b1bc6cfec86a6#commitcomment-40263964
+    
+    - Patch Note : Add Rank Game tier image thumbnail
+    
+    - Thanks to jaedan1010 for re-check embedding thumbnail
     
 ***
 

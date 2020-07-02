@@ -21,7 +21,7 @@ import json
 import time
 
 
-token = 'NzI1MzQzNjQ3NjM3MTc2MzUw.Xv3cgA.r5GR9iZuocI0l4htDUY4dhU57G8'
+token = ''
 
 client = discord.Client()
 @client.event # Use these decorator to register an event.
