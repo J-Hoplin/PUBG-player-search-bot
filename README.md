@@ -51,7 +51,7 @@ Discord Bot : Player Unknown Battle Ground Player information Search
 
   - !경쟁전1 : Search player's TPP Ranking Information.
   
-  - 경쟁전 2 : Search Player's FPP Ranking Information
+  - !경쟁전 2 : Search Player's FPP Ranking Information
 
   - !배그솔로1 : Search player's solo que(TPP)
   
