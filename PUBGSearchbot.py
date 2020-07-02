@@ -21,7 +21,7 @@ import json
 import time
 
 
-token = 'NzI1MzQzNjQ3NjM3MTc2MzUw.XvR4yw.N9HfRqb3jV_uADulUAnyfSGEjLc'
+token = 'NzI1MzQzNjQ3NjM3MTc2MzUw.Xv3cgA.r5GR9iZuocI0l4htDUY4dhU57G8'
 
 client = discord.Client()
 @client.event # Use these decorator to register an event.
@@ -134,6 +134,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed.add_field(name="평균딜량", value=statsList[3] + "/" + statsRatingList[3], inline=True)
                     embed.add_field(name="게임수", value=statsList[4] + "판/" + statsRatingList[4], inline=True)
                     embed.add_field(name="평균등수", value=statsList[5],inline=True)
+                    embed.set_thumbnail(url=f'https:{tierMedalImage}')
                     embed.set_footer(text='Service provided by Hoplin.',
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("PUBG player " + playerNickname + "'s TPP Ranking information", embed=embed)
@@ -248,6 +249,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed.add_field(name="평균딜량", value=statsList[3] + "/" + statsRatingList[3], inline=True)
                     embed.add_field(name="게임수", value=statsList[4] + "판/" + statsRatingList[4], inline=True)
                     embed.add_field(name="평균등수", value=statsList[5],inline=True)
+                    embed.set_thumbnail(url=f'https:{tierMedalImage}')
                     embed.set_footer(text='Service provided by Hoplin.',
                                      icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
                     await message.channel.send("PUBG player " + playerNickname + "'s FPP Ranking information", embed=embed)
